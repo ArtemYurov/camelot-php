@@ -1,10 +1,12 @@
-# randomstate/camelot-php
+# kayukoff/camelot-php
 
-A PHP wrapper for Camelot, the python PDF table extraction library
+A PHP wrapper for Camelot, the python PDF table extraction library.
+
+A fork from randomstate/camelot-php updated for user with Symfony 6 and PHP 8.
 
 ## Installation
 
-`composer require randomstate/camelot-php`
+`composer require kayukoff/camelot-php`
 
 ## Usage
 

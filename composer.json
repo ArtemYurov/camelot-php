@@ -1,5 +1,5 @@
 {
-  "name": "randomstate/camelot-php",
+  "name": "kayukoff/camelot-php",
   "description": "PHP Wrapper library for interfacing with the Camelot PDF table extraction library built in Python",
   "type": "library",
   "authors": [
@@ -24,7 +24,7 @@
     }
   },
   "require-dev": {
-    "phpunit/phpunit": "^8.5",
+    "phpunit/phpunit": "^9.5",
     "league/csv": "^9.8"
   },
   "license": "MIT"
