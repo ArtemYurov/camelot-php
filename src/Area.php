@@ -1,23 +1,15 @@
 <?php
 
-
 namespace RandomState\Camelot;
-
 
 class Area
 {
-    protected int $xTopLeft;
-    protected int $yTopLeft;
-    protected int $xBottomRight;
-    protected int $yBottomRight;
-
-    public function __construct(int $xTopLeft, int $yTopLeft, int $xBottomRight, int $yBottomRight)
-    {
-        $this->xTopLeft = $xTopLeft;
-        $this->yTopLeft = $yTopLeft;
-        $this->xBottomRight = $xBottomRight;
-        $this->yBottomRight = $yBottomRight;
-    }
+    public function __construct(
+        protected int $xTopLeft,
+        protected int $yTopLeft,
+        protected int $xBottomRight,
+        protected int $yBottomRight,
+    ) {}
 
     public function xTopLeft(): int
     {

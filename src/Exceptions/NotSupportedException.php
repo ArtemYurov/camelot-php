@@ -1,14 +1,12 @@
 <?php
 
-
 namespace RandomState\Camelot\Exceptions;
-
 
 abstract class NotSupportedException extends \Exception
 {
     public function __construct(string $mode)
     {
-        parent::__construct("Processing mode '$mode' does not support ". $this->featureName() . ". It can be used with ". $this->validModesString().".");
+        parent::__construct(sprintf('Processing mode "%s" does not support "%s". It can be used with "%s"', $mode, $this->featureName(), $this->validModesString()));
     }
 
     private function validModesString(): string
@@ -18,6 +16,8 @@ abstract class NotSupportedException extends \Exception
 
         return count($validModes) > 1 ? $modes . ' modes' : $modes . ' mode';
     }
+
     abstract protected function validModes(): array;
+
     abstract protected function featureName(): string;
 }

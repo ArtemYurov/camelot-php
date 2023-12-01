@@ -1,8 +1,6 @@
 <?php
 
-
 namespace RandomState\Camelot;
-
 
 use RandomState\Camelot\Exceptions\BackgroundLinesNotSupportedException;
 use RandomState\Camelot\Exceptions\ColumnSeparatorsNotSupportedException;
@@ -17,96 +15,44 @@ class Camelot
 
     /**
      * lattice | stream
-     *
-     * @var string
      */
     protected string $mode;
 
     /**
      * csv | json | excel | html | sqlite
-     *
-     * @var string
      */
     protected string $format = 'csv';
 
-    /**
-     * @var string
-     */
     protected string $path;
 
-    /**
-     * @var string
-     */
     protected string $pages = '';
 
-    /**
-     * @var string
-     */
     protected string $password = '';
 
-    /**
-     * @var string
-     */
     protected string $processBackgroundLines = '';
 
-    /**
-     * @var string
-     */
     protected string $plot = '';
 
-    /**
-     * @var Areas|null
-     */
     protected ?Areas $areas = null;
 
-    /**
-     * @var Areas|null
-     */
     protected ?Areas $regions = null;
 
-    /**
-     * @var array
-     */
     protected array $columnSeparators = [];
 
-    /**
-     * @var bool
-     */
     protected bool $splitAlongSeparators = false;
 
-    /**
-     * @var bool
-     */
     protected bool $flagSize = false;
 
-    /**
-     * @var string
-     */
     protected string $unwantedCharacters = '';
 
-    /**
-     * @var int|null
-     */
     protected ?int $edgeTolerance = null;
 
-    /**
-     * @var int|null
-     */
     protected ?int $rowTolerance = null;
 
-    /**
-     * @var int|null
-     */
     protected ?int  $lineScale = null;
 
-    /**
-     * @var array
-     */
     protected array $textShift = [];
 
-    /**
-     * @var array
-     */
     protected array $copyTextDirections = [];
 
     public function __construct(string $path, ?string $mode = null)
@@ -368,5 +314,4 @@ class Camelot
 
         return $this;
     }
-
 }

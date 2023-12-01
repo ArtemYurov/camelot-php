@@ -1,8 +1,6 @@
 <?php
 
-
 namespace RandomState\Camelot\Exceptions;
-
 
 use RandomState\Camelot\Camelot;
 
@@ -17,7 +15,7 @@ class BackgroundLinesNotSupportedException extends NotSupportedException
 
     protected function featureName(): string
     {
-        return "processing background lines";
+        return 'processing background lines';
     }
 
 }

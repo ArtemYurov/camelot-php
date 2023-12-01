@@ -1,8 +1,6 @@
 <?php
 
-
 namespace RandomState\Camelot;
-
 
 class Areas
 {
