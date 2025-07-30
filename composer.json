@@ -1,5 +1,5 @@
 {
-  "name": "kayukoff/camelot-php",
+  "name": "artemyurov/camelot-php",
   "description": "PHP Wrapper library for interfacing with the Camelot PDF table extraction library built in Python",
   "type": "library",
   "authors": [
@@ -10,7 +10,7 @@
   ],
   "require": {
     "php": ">=8.1",
-    "symfony/process": "^5.0|^6.0",
+    "symfony/process": "^5.0|^6.0|^7.0",
     "spatie/temporary-directory": "^2.0"
   },
   "autoload": {
