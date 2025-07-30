@@ -151,7 +151,7 @@ class Camelot
         $areas = $this->areas ? $this->areas->toDelimitedString(" -T ") : "";
         $regions = $this->regions ? $this->regions->toDelimitedString(" -R ") : "";
 
-        $cmd = "camelot --format {$format} {$output}{$pages}{$password}{$flagSize}{$split}{$strip}{$mode}{$textShift}{$copyText}{$lineScale}{$edgeTolerance}{$rowTolerance}{$background}{$plot}{$areas}{$regions}{$columnSeparators} " . $this->path;
+        $cmd = "camelot --format {$format} {$output}{$pages}{$password}{$flagSize}{$split}{$strip}{$mode}{$textShift}{$copyText}{$lineScale}{$edgeTolerance}{$rowTolerance}{$background}{$plot}{$areas}{$regions}{$columnSeparators} \"$this->path\"";
 
         $process = Process::fromShellCommandline($cmd);
         $process->run();
