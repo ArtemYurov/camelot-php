@@ -117,6 +117,22 @@ class Camelot
             return preg_match("/{$filename}-.*-table-.*\..*/", $file);
         }));
 
+        usort($files, function ($a, $b) {
+            preg_match('/page-(\d+)-table-(\d+)/', $a, $matchesA);
+            preg_match('/page-(\d+)-table-(\d+)/', $b, $matchesB);
+
+            $pageA = (int)$matchesA[1];
+            $pageB = (int)$matchesB[1];
+            $tableA = (int)$matchesA[2];
+            $tableB = (int)$matchesB[2];
+
+            if ($pageA === $pageB) {
+                return $tableA - $tableB;
+            }
+
+            return $pageA - $pageB;
+        });
+
         $output = [];
 
         foreach ($files as $file) {
